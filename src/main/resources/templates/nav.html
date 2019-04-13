@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--导航条-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <script src="../static/jquery-3.3.1.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="container">
+    <ul id="mytab" class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="">Home</a></li>
+        <li role="presentation" ><a href="">Hello</a></li>
+        <li role="presentation" class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Moto
+        <span class="caret">
+
+        </span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1">Hello1</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1">Hello2</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1">Hello3</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1">Hello4</a></li>
+        </ul>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $("#mytab a").click(function (e) {
+        e.preventDefault();
+        $(this).tab("show")
+    })
+</script>
+</html>

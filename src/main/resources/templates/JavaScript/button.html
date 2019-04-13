@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮</title>
+    <link rel="stylesheet" href="../../static/bootstrap.min.css">
+    <script src="../../static/jquery-1.11.0.js"></script>
+    <script src="../../static/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary js-loading-btn" >
+        Loading state
+    </button>
+    <button type="button" class="btn btn-default" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Single toggle
+    </button>
+    <hr>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="checkbox" autocomplete="off" checked> Checkbox 1
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+    </div>
+    <hr>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+    </div>
+    <hr>
+    <button type="button" id="myStateButton" data-complete-text="finished!" class="btn btn-primary" autocomplete="off">
+        ...
+    </button>
+</div>
+
+<script>
+    $(".js-loading-btn").on('click', function (e) {
+        var $btn = $(this).button("loading")
+        // business logic...
+        setTimeout(function (e) {
+            $btn.button("reset")
+        },3000)
+    })
+
+    $("#myStateButton").on('click', function () {
+        $(this).button('complete') // button text will be "finished!"
+    })
+</script>
+</body>
+</html>

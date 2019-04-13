@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态框</title>
+    <link rel="stylesheet" href="../../static/bootstrap.min.css">
+    <script src="../../static/jquery-1.11.0.js"></script>
+    <script src="../../static/bootstrap.min.js"></script>
+</head>
+<body>
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+    <!--happy-->
+<!--</button>-->
+
+<!--<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLable" aria-hidden="true">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                    <!--<span aria-hidden="true">&times;</span>-->
+                <!--</button>-->
+                <!--<h4 class="modal-title" id="myModallabel">Modal title</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--happy-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary" >Save</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">-->
+    <!--BIG happy-->
+<!--</button>-->
+<!--<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModal" aria-hidden="true">-->
+    <!--<div class="modal-dialog modal-lg">-->
+        <!--<div class="modal-content">-->
+            <!--big big happy-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+    Modal for @mdo
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLable">要开心</h4>
+
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">happy </label>
+                        <input class="form-control" type="text" id="recipient-name">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+             </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // $("#myModal").modal("show");
+        $("#exampleModal").on("show.bs.modal",function (e) {
+            vat button = $(e.relatedTarget)
+            var recipient = button.data("whatever")
+            var modal = $(this);
+        })
+</script>
+</html>

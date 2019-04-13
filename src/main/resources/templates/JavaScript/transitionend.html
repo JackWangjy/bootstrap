@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡效果</title>
+<style>
+    #mydiv{
+        width:100px;
+        height:100px;
+        background: red;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+    }
+    #mydiv:hover{
+        width: 400px;
+    }
+
+</style>
+    <script src="../../static/jquery-1.11.0.js"></script>
+</head>
+<body>
+<div id="mydiv">
+
+</div>
+<script>
+    document.getElementById("mydiv").addEventListener("transitionend",function (evt) {
+        this.innerHTML="你好啊111111111";
+    })
+</script>
+</body>
+
+</html>
